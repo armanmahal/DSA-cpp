@@ -5,7 +5,7 @@ using namespace std;
 void bubbleSort(int arr[], int size)
 {
     //traversal of swapping will happen for size-1 times
-    for (int i = 0; i < size - 1; i++)
+    for (int i = 1; i < size ; i++)
     {
 
         int j = 0;
