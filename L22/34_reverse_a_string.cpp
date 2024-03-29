@@ -4,11 +4,13 @@
 #include <string>
 using namespace std;
 
-int stringLength(char arr[]){
+int stringLength(char arr[])
+{
     int length = 0;
     int i = 0;
-    //keep on increasing length until null character'\0' is reached:
-    while(arr[i]!='\0'){
+    // keep on increasing length until null character'\0' is reached:
+    while (arr[i] != '\0')
+    {
         length++;
         i++;
     }
@@ -16,20 +18,23 @@ int stringLength(char arr[]){
     return length;
 }
 
-void reverseString(char arr[], int size){
+void reverseString(char arr[], int size)
+{
     int s = 0;
     int e = size - 1;
 
-    while (s<e){
+    while (s < e)
+    {
         swap(arr[s++], arr[e--]);
     }
 }
 
-int main(){
+int main()
+{
     char arr[] = "hello";
     int size = stringLength(arr);
 
     reverseString(arr, size);
 
-    cout<<arr<<endl;
+    cout << arr << endl;
 }

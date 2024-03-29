@@ -12,11 +12,13 @@ void reverseWords(char arr[])
 
     while (true)
     {
-        while ( (arr[j] != ' ') && (arr[j] != '\0') )
+        // finding the length of current word: (keep on increasing j until reached a space or null character)
+        while ((arr[j] != ' ') && (arr[j] != '\0'))
         {
             j++;
         }
 
+        // reversing the current word:
         int start = i;
         int end = j - 1;
         while (start <= end)
@@ -24,11 +26,13 @@ void reverseWords(char arr[])
             swap(arr[start++], arr[end--]);
         }
 
+        // if reached the end of phrase, i.e. j points to null character, exit the loop:
         if (arr[j] == '\0')
         {
             break;
         }
 
+        // setting i and j to the next word:
         i = j + 1;
         j = j + 1;
     }
