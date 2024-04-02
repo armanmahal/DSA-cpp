@@ -20,26 +20,29 @@ void printMatrix(vector<vector<int>> v)
     }
 }
 
-//pass the vector by 'pass by reference'
+// pass the vector by 'pass by reference'
 void rotateMatrix(vector<vector<int>> &v)
 {
     // as it is a square matrix:
     int n = v.size();
 
-    //transpose the matrix:
-    for(int i = 0; i < n; i++){
-        for(int j = i+1; j < n; j++){
+    // transpose the matrix:
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
             swap(v[i][j], v[j][i]);
         }
     }
 
-    //reverse each row:
-    for(int i = 0 ; i < n/2; i++){
-        for(int j = 0; j < n; j++){
-            swap(v[j][i],v[j][n-1-i]);
+    // reverse each row:
+    for (int i = 0; i < n / 2; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            swap(v[j][i], v[j][n - 1 - i]);
         }
     }
-
 }
 
 int main()
@@ -56,13 +59,13 @@ int main()
 
     cout << "after Rotating:" << endl;
     printMatrix(v);
-    cout<<endl;
+    cout << endl;
 
     vector<vector<int>> v2 = {
         {1, 2, 3, 4},
         {5, 6, 7, 8},
-        {9, 10 ,11, 12},
-        {13, 14,15, 16}};
+        {9, 10, 11, 12},
+        {13, 14, 15, 16}};
 
     cout << "before Rotating:" << endl;
     printMatrix(v2);
@@ -71,6 +74,5 @@ int main()
 
     cout << "after Rotating:" << endl;
     printMatrix(v2);
-    cout<<endl;
-
+    cout << endl;
 }
