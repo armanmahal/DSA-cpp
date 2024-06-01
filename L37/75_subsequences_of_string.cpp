@@ -16,7 +16,7 @@ c
 #include <string>
 using namespace std;
 
-void print2dVector(vector<string> vec)
+void printStringVector(vector<string> vec)
 {
     cout << "[ ";
     for (int i = 0; i < vec.size(); i++)
@@ -41,7 +41,7 @@ void solve(string str, vector<string> &ans, string &output, int index = 0)
     // including the current index:
     output.push_back(str[index]);
     solve(str, ans, output, index + 1);
-    output.pop_back();
+    output.pop_back(); //backtracking
 }
 
 int main()
@@ -54,5 +54,5 @@ int main()
 
     solve(s, ans, output);
 
-    print2dVector(ans);
+    printStringVector(ans);
 }
