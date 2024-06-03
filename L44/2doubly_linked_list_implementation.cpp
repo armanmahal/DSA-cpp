@@ -198,4 +198,6 @@ int main()
     deleteNodeByPosition(head, tail, 3);
     printLinkedList(head);
     cout << "length: " << getLengthOfList(head) << endl;
+
+    delete head;
 }

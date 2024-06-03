@@ -173,4 +173,6 @@ int main()
     deleteNodeByPosition(head, tail, 2);
 
     printLinkedList(head);
+
+    delete head;
 }
